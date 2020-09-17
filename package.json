@@ -1,0 +1,22 @@
+{
+  "name": "3-custom-video-player",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connoro7/custom-video-player.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/connoro7/custom-video-player/issues"
+  },
+  "homepage": "https://github.com/connoro7/custom-video-player#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
