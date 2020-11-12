@@ -2,13 +2,15 @@
 @import 'progress.scss';
 
 :root {
-  --background-color: #666;
+  --bg-light: #666;
+  --bg-dark: #333;
   --text-color-primary: #fff;
   --text-color-secondary: #9c9c9c;
-  --success-color: #2ecc71;
-  --warning-color: #fffb00;
-  --error-color: #e74c3c;
+  --success: #2ecc71;
+  --warning: #fffb00;
+  --error: #e74c3c;
   --info-color: #3498db;
+  --desktop-width: 60%;
 }
 
 * {
@@ -19,7 +21,7 @@
 
 body {
   font-family: 'Questrial', sans-serif;
-  background-color: var(--background-color);
+  background-color: var(--bg-light);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,6 +36,56 @@ h1 {
 
 .screen {
   cursor: pointer;
-  width: 50%;
+  width: var(--desktop-width);
   background-color: #000 !important; //!important flag necessary for video, do not remove
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.controls {
+  background: #333;
+  width: var(--desktop-width);
+  color: var(--text-color-primary);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.controls .btn {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.controls .fa-play {
+  color: var(--success);
+}
+
+.controls .fa-pause {
+  color: var(--error);
+}
+
+.controls .progress {
+  width: 100%;
+}
+
+.controls .timestamp {
+  color: #fff;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+@media (max-width: 800px) {
+  .screen,
+  .controls {
+    width: 90%;
+  }
 }
