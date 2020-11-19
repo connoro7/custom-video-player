@@ -29,14 +29,30 @@ function updatePlayIcon() {
   }
 }
 
-// Update progress and timestamp
+// Update progress bar slider and timestamp
 function updateProgress() {
-  return true
+  // Moves progress bar slider forward as video plays
+  progress.value = (video.currentTime / video.duration) * 100
+
+  // Calculate elapsed minutes
+  let minutes = Math.floor(video.currentTime / 60)
+  if (minutes < 10) {
+    minutes = '0' + String(minutes)
+  }
+
+  // Calculate elapsed seconds
+  let seconds = Math.floor(video.currentTime % 60)
+  if (seconds < 10) {
+    seconds = '0' + String(seconds)
+  }
+
+  timestamp.innerHTML = `${minutes}:${seconds}`
 }
 
 // Set video time to progress
 function setVideoProgress() {
-  return true
+  // Updates video playback time when user clicks and drags progress bar
+  video.currentTime = (+progress.value * video.duration) / 100
 }
 
 // Stop video
