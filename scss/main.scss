@@ -9,7 +9,7 @@
   --success: #2ecc71;
   --warning: #fffb00;
   --error: #e74c3c;
-  --info-color: #3498db;
+  --info: #3498db;
   --desktop-width: 60%;
 }
 
@@ -62,11 +62,11 @@ h1 {
 }
 
 .controls .fa-play {
-  color: var(--success);
+  color: var(--text-color-secondary);
 }
 
 .controls .fa-pause {
-  color: var(--error);
+  color: var(--text-color-secondary);
 }
 
 .controls .progress {
